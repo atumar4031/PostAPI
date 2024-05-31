@@ -1,0 +1,15 @@
+<div>
+    <button (click)="addPost()">add post</button>
+</div>
+<!-- <div>{{post$ | async | json}}</div> -->
+<div>{{getError$ | async | json}}</div>
+<div *ngIf="post$ | async as posts">
+    <app-post-list [posts]="posts"
+    (postDetail)="showPost($event)" 
+    (deleteDetail)="deletePost($event)"></app-post-list>
+</div>
+
+
+<div>
+    <button (click)="updatePost()">update post</button>
+</div>

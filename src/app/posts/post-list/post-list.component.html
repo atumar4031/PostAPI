@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>title</th>
+            <th>body</th>
+            <th>userId</th>
+            <th>action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td>{{post.userId}}</td>
+            <td><button (click)="showPost(post)">show</button></td>
+            <td><button (click)="deletePost(post)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
